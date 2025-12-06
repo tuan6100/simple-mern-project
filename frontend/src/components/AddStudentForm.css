@@ -1,0 +1,141 @@
+/* AddStudentForm.css */
+
+/* Container nút thêm */
+.add-student {
+    display: flex;
+    justify-content: flex-end; /* Đẩy nút sang phải */
+    margin-top: 20px;
+}
+
+/* Nút mở Modal */
+.add-student > button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.add-student > button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* === MODAL STYLES === */
+
+/* Lớp phủ mờ toàn màn hình */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu đen mờ 50% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px); /* Hiệu ứng mờ nền phía sau (glassmorphism nhẹ) */
+}
+
+/* Nội dung Modal */
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-grid div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-grid label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.form-grid input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-grid input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Buttons trong Modal */
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+}
+
+/* Nút Lưu (Primary) */
+.modal-buttons button:first-child {
+    background-color: var(--primary-color);
+    color: white;
+}
+.modal-buttons button:first-child:hover {
+    background-color: var(--primary-hover);
+}
+.modal-buttons button:first-child:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Nút Hủy (Secondary) */
+.modal-buttons button:last-child {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #666;
+}
+.modal-buttons button:last-child:hover {
+    background-color: #f8f9fa;
+    border-color: #bbb;
+    color: #333;
+}
