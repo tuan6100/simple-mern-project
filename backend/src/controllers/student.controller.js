@@ -6,7 +6,7 @@ import {StudentDto} from "../dtos/student.dto.js";
  *
  * @param req - Chứa thams số truy vấn
  * @param res - Trả về danh sách học sinh
- * @returns {Promise<Array.<{id: string, name: string, age: number, clazz: string}>>}
+ * @returns {Promise<StudentDto[]>}
  */
 export async function getStudents(req, res) {
     try {
@@ -30,7 +30,7 @@ export async function getStudents(req, res) {
  * @param req - chứa thông tin học sinh mới
  * @param res - trả về học sinh vừa tạo
  * @param next - Hàm chuyển tiếp đến middleware xử lý lỗi
- * @returns {Promise<{id: string, name: string, age: number, clazz: string}>}
+ * @returns {Promise<StudentDto[]>}
  */
 export async function createStudent(req, res, next) {
     try {
@@ -61,7 +61,7 @@ export async function createStudent(req, res, next) {
  * @param req - Trường được cập nhật
  * @param res - Thông tin học sinh đã được cập nhật
  * @param next - Hàm chuyển tiếp đếp middleware xử lý lỗi
- * @returns {Promise<{id: string, name: string, age: number, clazz: string}>}
+ * @returns {Promise<StudentDto[]>}
  */
 export async function updateStudent(req, res, next) {
     try {
@@ -121,7 +121,7 @@ export async function deleteStudent(req, res, next) {
  * Bài 5: Tìm Kiếm Học sinh theo Tên
  * @param req - Chứa tham số truy vấn tên
  * @param res - Trả về danh sách học sinh khớp tên
- * @returns {Promise<Array.<{id: string, name: string, age: number, clazz: string}>>}
+ * @returns {Promise<StudentDto[]>}
  */
 export async function searchStudentsByName(req, res) {
     try {

@@ -5,17 +5,19 @@
 và [Swagger](https://swagger.io/) để tài liệu hóa API tự động.
 
 ## Danh sách RESTful API
-| Method   | Prefix URL      | Endpoint            | Mô tả                            |
-|----------|-----------------|---------------------|----------------------------------|
-| GET      | /api/students   | /                   | Lấy danh sách tất cả học sinh    |
-| GET      | /api/students   | /search?name=kw     | Tìm kiếm học sinh theo tên       |
-| POST     | /api/students   | /                   | Thêm học sinh mới                |
-| PUT      | /api/students   | /:id                | Cập nhật thông tin học sinh      |
-| DELETE   | /api/students   | /:id                | Xóa học sinh theo ID             |
-| GET      | /api-docs       | /ui                 | Mở Swagger UI trên trình duyệt   |
+| Method   | Prefix URL      | Endpoint                 | Mô tả                            |
+|----------|-----------------|--------------------------|----------------------------------|
+| GET      | /api            | /students                | Lấy danh sách tất cả học sinh    |
+| GET      | /api            | /students/search?name=kw | Tìm kiếm học sinh theo tên       |
+| POST     | /api            | /students                | Thêm học sinh mới                |
+| PUT      | /api            | /students/:id            | Cập nhật thông tin học sinh      |
+| DELETE   | /api            | /:id                     | Xóa học sinh theo ID             |
+| GET      | /api-docs       | /ui                      | Mở Swagger UI trên trình duyệt   |
+| -------- | --------------- | -------------------      | -------------------------------- |
 
 ## Dành cho nhà phát triển
 ```bash
 npm i
 npm run dev
 ```
+Backend chạy trên port 5000, frontend trên port 3000.
