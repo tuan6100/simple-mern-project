@@ -13,7 +13,6 @@ và [Swagger](https://swagger.io/) để tài liệu hóa API tự động.
 | PUT      | /api            | /students/:id            | Cập nhật thông tin học sinh      |
 | DELETE   | /api            | /:id                     | Xóa học sinh theo ID             |
 | GET      | /api-docs       | /ui                      | Mở Swagger UI trên trình duyệt   |
-| -------- | --------------- | -------------------      | -------------------------------- |
 
 ## Dành cho nhà phát triển
 ```bash
